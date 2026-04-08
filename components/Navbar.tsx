@@ -12,19 +12,19 @@ export default function Navbar() {
   }, [dark]);
 
   return (
-    <nav className="backdrop-blur bg-[var(--color-background)]/80 text-[var(--color-foreground)] fixed w-full top-0 z-50 shadow-md">
+    <nav className="backdrop-blur bg-[var(--color-background)]/80 text-[var(--color-foreground)] fixed w-full top-0 z-50 shadow-md border-b-3 border-[var(--color-primary)]">
       <div className="relative max-w-7xl mx-auto px-6 py-4 flex items-center">        
         <div className="flex items-center gap-2">
           <Image
             src="/Logo-Portfolio.png"
             alt="Logo"
-            width={40}
-            height={40}
+            width={70}
+            height={0}
             className="object-contain"
           />
         </div>
 
-        <ul className="absolute left-1/2 -translate-x-1/2 flex gap-10 font-[var(--font-body)]">
+        <ul className="absolute left-1/2 -translate-x-1/2 flex gap-20 font-[var(--font-body)] text-xl font-bold">
           <li>
             <Link href="/" className="hover:text-[var(--color-accent)] transition">
               Início
@@ -41,6 +41,11 @@ export default function Navbar() {
             </Link>
           </li>
           <li>
+            <Link href="/tecnologias" className="hover:text-[var(--color-accent)] transition">
+              Tecnologias
+            </Link>
+          </li>
+          <li>
             <Link href="/contato" className="hover:text-[var(--color-accent)] transition">
               Contato
             </Link>
@@ -50,7 +55,7 @@ export default function Navbar() {
         <div className="ml-auto">
           <button
             onClick={() => setDark(!dark)}
-            className="bg-[var(--color-secondary)] px-3 py-1 rounded-lg hover:bg-[var(--color-accent)] transition"
+            className="bg-[var(--color-secondary)] cursor-pointer px-4 py-4 rounded-lg hover:bg-[var(--color-accent)] transition"
           >
             {dark ? "🌙" : "☀️"}
           </button>

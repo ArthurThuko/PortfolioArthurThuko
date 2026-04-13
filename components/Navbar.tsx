@@ -12,7 +12,7 @@ export default function Navbar() {
   }, [dark]);
 
   return (
-    <nav className="backdrop-blur bg-[var(--color-background)]/80 text-[var(--color-foreground)] fixed w-full top-0 z-50 shadow-md border-b-3 border-[var(--color-primary)]">
+    <nav className="backdrop-blur-md bg-[var(--color-background)]/5 text-[var(--color-foreground)] fixed w-full top-0 z-50 shadow-md border-b-3 border-[var(--color-primary)]">
       <div className="relative max-w-7xl mx-auto px-6 py-4 flex items-center">        
         <div className="flex items-center gap-2">
           <Image
@@ -20,7 +20,7 @@ export default function Navbar() {
             alt="Logo"
             width={70}
             height={0}
-            className="object-contain"
+            className=""
           />
         </div>
 

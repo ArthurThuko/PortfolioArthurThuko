@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import localFont from "next/font/local";
+import FundoDinamico from "@/components/FundoDinamico";
 
 export const metadata: Metadata = {
   title: "Portfólio Arthur/Thuko",
@@ -57,6 +58,7 @@ export default function RootLayout({
       <body
         className={`${poppins.variable} ${inter.variable} ${firaCode.variable}`}
       >
+        <FundoDinamico />
         <Navbar />
         {children}
       </body>

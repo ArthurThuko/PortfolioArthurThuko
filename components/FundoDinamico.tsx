@@ -26,7 +26,6 @@ export default function FundoDinamico() {
       mouse.y = e.y;
     });
 
-    // Criar partículas
     const createParticles = () => {
       particles = Array.from({ length: 80 }, () => ({
         x: Math.random() * canvas.width,
@@ -39,30 +38,37 @@ export default function FundoDinamico() {
 
     createParticles();
 
+    const getColors = () => {
+      const styles = getComputedStyle(document.documentElement);
+
+      return {
+        background: styles.getPropertyValue("--color-background").trim(),
+        primary: styles.getPropertyValue("--color-primary").trim(),
+        accent: styles.getPropertyValue("--color-accent").trim(),
+      };
+    };
+
     const draw = () => {
+      const colors = getColors();
+
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-      // Fundo
-      ctx.fillStyle = "#1E293B";
+      ctx.fillStyle = colors.background;
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-      // Partículas
-      particles.forEach((p, i) => {
+      particles.forEach((p) => {
         p.x += p.vx;
         p.y += p.vy;
 
-        // Rebater nas bordas
         if (p.x < 0 || p.x > canvas.width) p.vx *= -1;
         if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
 
-        // Desenhar partícula
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
-        ctx.fillStyle = "#38BDF8";
+        ctx.fillStyle = colors.accent;
         ctx.fill();
 
-        // Conexões
-        particles.forEach((p2, j) => {
+        particles.forEach((p2) => {
           const dx = p.x - p2.x;
           const dy = p.y - p2.y;
           const dist = Math.sqrt(dx * dx + dy * dy);
@@ -76,7 +82,6 @@ export default function FundoDinamico() {
           }
         });
 
-        // Interação com mouse
         const dx = p.x - mouse.x;
         const dy = p.y - mouse.y;
         const dist = Math.sqrt(dx * dx + dy * dy);
@@ -85,7 +90,7 @@ export default function FundoDinamico() {
           ctx.beginPath();
           ctx.moveTo(p.x, p.y);
           ctx.lineTo(mouse.x, mouse.y);
-          ctx.strokeStyle = "rgba(56, 189, 248, 0.5)";
+          ctx.strokeStyle = colors.primary;
           ctx.stroke();
         }
       });
@@ -100,10 +105,5 @@ export default function FundoDinamico() {
     };
   }, []);
 
-  return (
-    <canvas
-      ref={canvasRef}
-      className="fixed inset-0 -z-10"
-    />
-  );
+  return <canvas ref={canvasRef} className="fixed inset-0 -z-10" />;
 }

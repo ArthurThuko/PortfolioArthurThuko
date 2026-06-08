@@ -1,19 +1,20 @@
 @import "tailwindcss";
 
-@theme {
+:root {
   --color-primary: #2563EB;
-  --color-secondary: #1E293B;
+  --color-background: #FFFFFF;
+  --color-text: #0F172A;
+}
+
+.dark {
+  --color-primary: #2563EB;
   --color-background: #0F172A;
   --color-text: #E2E8F0;
-  --color-accent: #38BDF8;
-
-  --font-title: "Poppins", sans-serif;
-  --font-body: "Inter", sans-serif;
-  --font-code: "Fira Code", monospace;
 }
 
 body {
   background-color: var(--color-background);
   color: var(--color-text);
   font-family: var(--font-body);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }

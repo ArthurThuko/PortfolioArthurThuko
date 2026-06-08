@@ -4,4 +4,9 @@ async function loadComponent(id, file) {
   document.getElementById(id).innerHTML = html;
 }
 
-loadComponent("navbar", "./components/navbar.html");
+async function init() {
+  await loadComponent("navbar", "./components/navbar.html");
+  initThemeToggle();
+}
+
+init();

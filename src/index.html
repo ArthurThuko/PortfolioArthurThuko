@@ -1,81 +1,547 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Portfólio - Arthur/Thuko</title>
 
-<head>
-  <meta charset="UTF-8">
-  <title>Portfólio - Arthur/Thuko</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@500;600;700&family=Fira+Code&display=swap"
+      rel="stylesheet"
+    />
+    <link href="./styles/output.css" rel="stylesheet" />
+    <link rel="icon" type="image/x-icon" href="../public/icons/Logo.ico" />
+  </head>
 
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@500;600;700&family=Fira+Code&display=swap"
-    rel="stylesheet">
-  <link href="./styles/output.css" rel="stylesheet">
-  <link rel="icon" type="image/x-icon" href="../public/icons/Logo.ico">
-</head>
+  <body
+    class="bg-[var(--color-background)] text-[var(--color-text)] overflow-x-hidden"
+  >
+    <div id="navbar"></div>
 
-<body class="bg-[var(--color-background)] text-[var(--color-text)] overflow-x-hidden">
-  <div id="navbar"></div>
-
-  <section class="relative min-h-[90vh] flex items-center justify-between px-16">
-
-    <div class="absolute inset-0 -z-10">
-      <div class="w-full h-full bg-gradient-to-br from-blue-600/20 via-transparent to-cyan-400/20 animate-pulse"></div>
-    </div>
-
-    <div class="relative w-1/2 hidden md:flex justify-center">
-
-      <div
-        class="w-48 h-48 border-2 border-[var(--color-text)]/20 rounded-2xl flex items-center justify-center absolute left-10 top-10 backdrop-blur-md">
-        Foto 1
+    <section
+      class="relative min-h-[90vh] flex items-center justify-between px-16"
+    >
+      <div class="absolute inset-0 -z-10">
+        <div
+          class="w-full h-full bg-gradient-to-br from-blue-600/20 via-transparent to-cyan-400/20 animate-pulse"
+        ></div>
       </div>
 
       <div
-        class="w-48 h-48 border-2 border-[var(--color-text)]/20 rounded-2xl flex items-center justify-center absolute left-40 top-40 backdrop-blur-md">
-        Foto 2
+        class="hidden md:flex relative w-1/2 h-[400px] items-center justify-center"
+      >
+        <div
+          class="w-48 h-48 border-2 border-[var(--color-text)]/20 rounded-2xl flex items-center justify-center absolute top-1/2 left-1/2 -translate-x-24 -translate-y-24 backdrop-blur-md"
+        >
+          Foto 1
+        </div>
+
+        <div
+          class="w-48 h-48 border-2 border-[var(--color-text)]/20 rounded-2xl flex items-center justify-center absolute top-1/2 left-1/2 translate-x-8 translate-y-8 backdrop-blur-md"
+        >
+          Foto 2
+        </div>
       </div>
 
+      <div class="w-full md:w-1/2">
+        <p class="mb-2 text-sm text-[var(--color-text)]/70">Bem-vindo ao</p>
+
+        <p class="mb-4 text-lg">Meu Portfólio</p>
+
+        <h1 class="text-5xl mb-4 text-[var(--color-primary)]">Arthur/Thuko</h1>
+
+        <p class="text-lg mb-6 text-[var(--color-text)]/80">
+          Desenvolvedor Full-Stack | Web/Mobile/Desktop
+        </p>
+
+        <div class="flex gap-4">
+          <button
+            class="px-6 py-3 rounded-lg bg-[var(--color-primary)] hover:bg-[var(--color-accent)] transition"
+          >
+            Projetos
+          </button>
+
+          <button
+            class="px-6 py-3 rounded-lg border border-[var(--color-text)]/20 hover:bg-[var(--color-text)]/10 transition"
+          >
+            Contato
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <div class="flex justify-center pb-6">
+      <div
+        class="w-6 h-6 border-b-2 border-r-2 rotate-45 border-[var(--color-text)]/50 animate-bounce"
+      ></div>
     </div>
 
-    <div class="w-full md:w-1/2">
+    <section id="sobre" class="relative min-h-[90vh] px-6 md:px-16 py-24">
+      <p class="text-sm mb-1 text-[var(--color-text)]/60">02</p>
+      <h2 class="text-3xl mb-16 text-[var(--color-primary)]">Sobre mim</h2>
 
-      <p class="mb-2 text-sm text-[var(--color-text)]/70">
-        Bem-vindo ao
-      </p>
+      <div
+        class="hidden md:block relative mx-auto w-full max-w-[1100px] h-[560px]"
+      >
+        <svg
+          class="absolute inset-0 w-full h-full pointer-events-none"
+          viewBox="0 0 1100 560"
+          preserveAspectRatio="none"
+        >
+          <line
+            x1="550"
+            y1="280"
+            x2="180"
+            y2="90"
+            stroke="currentColor"
+            class="text-[var(--color-text)]/25"
+            stroke-width="1.5"
+          />
+          <line
+            x1="550"
+            y1="280"
+            x2="470"
+            y2="45"
+            stroke="currentColor"
+            class="text-[var(--color-text)]/25"
+            stroke-width="1.5"
+          />
+          <line
+            x1="550"
+            y1="280"
+            x2="820"
+            y2="110"
+            stroke="currentColor"
+            class="text-[var(--color-text)]/25"
+            stroke-width="1.5"
+          />
+          <line
+            x1="550"
+            y1="280"
+            x2="130"
+            y2="280"
+            stroke="currentColor"
+            class="text-[var(--color-text)]/25"
+            stroke-width="1.5"
+          />
+          <line
+            x1="550"
+            y1="280"
+            x2="240"
+            y2="470"
+            stroke="currentColor"
+            class="text-[var(--color-text)]/25"
+            stroke-width="1.5"
+          />
+          <line
+            x1="550"
+            y1="280"
+            x2="510"
+            y2="510"
+            stroke="currentColor"
+            class="text-[var(--color-text)]/25"
+            stroke-width="1.5"
+          />
+          <line
+            x1="550"
+            y1="280"
+            x2="850"
+            y2="460"
+            stroke="currentColor"
+            class="text-[var(--color-text)]/25"
+            stroke-width="1.5"
+          />
+        </svg>
 
-      <p class="mb-4 text-lg">
-        Meu Portfólio
-      </p>
+        <div
+          class="absolute text-3xl md:text-4xl font-semibold whitespace-nowrap text-[var(--color-primary)]"
+          style="left: 550px; top: 280px; transform: translate(-50%, -50%)"
+        >
+          Arthur/Thuko
+        </div>
 
-      <h1 class="text-5xl mb-4 text-[var(--color-primary)]" style="font-family: 'Poppins'">
-        Arthur/Thuko
-      </h1>
+        <div
+          class="absolute text-sm text-center w-[170px]"
+          style="left: 180px; top: 90px; transform: translate(-50%, -50%)"
+        >
+          <p class="font-medium">Téc. de Informática</p>
+          <p class="text-[var(--color-text)]/70">IFBA — BA</p>
+        </div>
 
-      <p class="text-lg mb-6 text-[var(--color-text)]/80">
-        Desenvolvedor Full-Stack | Web/Mobile/Desktop
-      </p>
+        <div
+          class="absolute text-sm text-center w-[200px]"
+          style="left: 470px; top: 45px; transform: translate(-50%, -50%)"
+        >
+          <p class="font-medium">Tutor de Programação</p>
+          <p class="text-[var(--color-text)]/70">CESAR — PE</p>
+        </div>
 
-      <div class="flex gap-4">
+        <div
+          class="absolute text-sm text-center w-[200px]"
+          style="left: 820px; top: 110px; transform: translate(-50%, -50%)"
+        >
+          <p class="font-medium">Tutor de Programação</p>
+          <p class="text-[var(--color-text)]/70">CESAR — PE</p>
+        </div>
 
-        <button class="px-6 py-3 rounded-lg bg-[var(--color-primary)] hover:bg-[var(--color-accent)] transition">
-          Projetos
+        <div
+          class="absolute text-sm text-center w-[190px]"
+          style="left: 130px; top: 280px; transform: translate(-50%, -50%)"
+        >
+          <p class="font-medium">Estudante de Sistemas de Informação</p>
+          <p class="text-[var(--color-text)]/70">UNIRIOS — BA</p>
+        </div>
+
+        <div
+          class="absolute text-sm text-center w-[180px]"
+          style="left: 240px; top: 470px; transform: translate(-50%, -50%)"
+        >
+          <p class="font-medium">Trabalho em Equipe</p>
+          <p class="text-[var(--color-text)]/70">Comunicação · Proatividade</p>
+        </div>
+
+        <div
+          class="absolute text-sm text-center w-[200px]"
+          style="left: 510px; top: 520px; transform: translate(-50%, -50%)"
+        >
+          <p class="font-medium">Pensamento Lógico</p>
+          <p class="text-[var(--color-text)]/70">
+            Resolução de Problemas · Adaptável
+          </p>
+        </div>
+
+        <div
+          class="absolute text-sm text-center w-[200px]"
+          style="left: 850px; top: 460px; transform: translate(-50%, -50%)"
+        >
+          <p class="font-medium">Estagiário Desenv. Mobile</p>
+          <p class="text-[var(--color-text)]/70">Authentic — LTDA</p>
+        </div>
+      </div>
+
+      <div class="md:hidden grid grid-cols-1 gap-4">
+        <div
+          class="border-2 border-[var(--color-text)]/20 rounded-2xl p-4 backdrop-blur-md"
+        >
+          <p class="font-medium">Téc. de Informática</p>
+          <p class="text-sm text-[var(--color-text)]/70">IFBA — BA</p>
+        </div>
+        <div
+          class="border-2 border-[var(--color-text)]/20 rounded-2xl p-4 backdrop-blur-md"
+        >
+          <p class="font-medium">Estudante de Sistemas de Informação</p>
+          <p class="text-sm text-[var(--color-text)]/70">UNIRIOS — BA</p>
+        </div>
+        <div
+          class="border-2 border-[var(--color-text)]/20 rounded-2xl p-4 backdrop-blur-md"
+        >
+          <p class="font-medium">Tutor de Programação</p>
+          <p class="text-sm text-[var(--color-text)]/70">CESAR — PE</p>
+        </div>
+        <div
+          class="border-2 border-[var(--color-text)]/20 rounded-2xl p-4 backdrop-blur-md"
+        >
+          <p class="font-medium">Estagiário Desenv. Mobile</p>
+          <p class="text-sm text-[var(--color-text)]/70">Authentic — LTDA</p>
+        </div>
+        <div
+          class="border-2 border-[var(--color-text)]/20 rounded-2xl p-4 backdrop-blur-md"
+        >
+          <p class="font-medium">Soft skills</p>
+          <p class="text-sm text-[var(--color-text)]/70">
+            Trabalho em equipe, comunicação, proatividade, pensamento lógico
+          </p>
+        </div>
+      </div>
+
+      <div class="flex flex-wrap gap-4 justify-center mt-16">
+        <button
+          class="px-6 py-3 rounded-lg border border-[var(--color-text)]/20 hover:bg-[var(--color-text)]/10 transition"
+        >
+          Baixar currículo
         </button>
+        <button
+          class="px-6 py-3 rounded-lg border border-[var(--color-text)]/20 hover:bg-[var(--color-text)]/10 transition"
+        >
+          Ver certificados
+        </button>
+        <button
+          class="px-6 py-3 rounded-lg border border-[var(--color-text)]/20 hover:bg-[var(--color-text)]/10 transition"
+        >
+          Falar comigo
+        </button>
+      </div>
+    </section>
+
+    <!-- =========================================================
+       SEÇÃO: PROJETOS
+  ========================================================== -->
+    <section id="projetos" class="relative min-h-[90vh] px-6 md:px-16 py-24">
+      <div class="flex items-end justify-between mb-10 flex-wrap gap-4">
+        <div>
+          <p class="text-sm mb-1 text-[var(--color-text)]/60">03</p>
+          <h2 class="text-3xl text-[var(--color-primary)]">Meus projetos</h2>
+        </div>
+        <a
+          href="#"
+          class="text-sm underline underline-offset-4 text-[var(--color-primary)]"
+          >Ver todos os projetos →</a
+        >
+      </div>
+
+      <div class="relative">
+        <button
+          aria-label="Anterior"
+          class="hidden md:flex items-center justify-center rounded-full absolute -left-6 top-1/2 -translate-y-1/2 w-11 h-11 z-10 border border-[var(--color-text)]/20 bg-[var(--color-background)] hover:bg-[var(--color-text)]/10 transition"
+        >
+          ‹
+        </button>
+
+        <div
+          class="flex gap-6 overflow-x-auto pb-4"
+          style="scroll-snap-type: x mandatory"
+        >
+          <article
+            class="flex-shrink-0 w-[300px] border-2 border-[var(--color-text)]/20 rounded-2xl p-5 backdrop-blur-md"
+            style="scroll-snap-align: start"
+          >
+            <div
+              class="w-full h-40 rounded-lg mb-4 flex items-center justify-center text-sm bg-[var(--color-text)]/5"
+            >
+              Print / GIF
+            </div>
+            <h3 class="text-lg font-semibold mb-1">Nome do projeto</h3>
+            <p class="text-sm mb-3 text-[var(--color-text)]/75">
+              Descrição curta explicando o problema que o projeto resolve.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span
+                class="text-xs px-2 py-1 rounded-full border border-[var(--color-text)]/20"
+                >React</span
+              >
+              <span
+                class="text-xs px-2 py-1 rounded-full border border-[var(--color-text)]/20"
+                >Node.js</span
+              >
+            </div>
+            <a href="#" class="text-sm font-medium text-[var(--color-primary)]"
+              >GitHub / Demo →</a
+            >
+          </article>
+
+          <article
+            class="flex-shrink-0 w-[300px] border-2 border-[var(--color-text)]/20 rounded-2xl p-5 backdrop-blur-md"
+            style="scroll-snap-align: start"
+          >
+            <div
+              class="w-full h-40 rounded-lg mb-4 flex items-center justify-center text-sm bg-[var(--color-text)]/5"
+            >
+              Print / GIF
+            </div>
+            <h3 class="text-lg font-semibold mb-1">Nome do projeto</h3>
+            <p class="text-sm mb-3 text-[var(--color-text)]/75">
+              Descrição curta explicando o problema que o projeto resolve.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span
+                class="text-xs px-2 py-1 rounded-full border border-[var(--color-text)]/20"
+                >Flutter</span
+              >
+              <span
+                class="text-xs px-2 py-1 rounded-full border border-[var(--color-text)]/20"
+                >Firebase</span
+              >
+            </div>
+            <a href="#" class="text-sm font-medium text-[var(--color-primary)]"
+              >GitHub / Demo →</a
+            >
+          </article>
+
+          <article
+            class="flex-shrink-0 w-[300px] border-2 border-[var(--color-text)]/20 rounded-2xl p-5 backdrop-blur-md"
+            style="scroll-snap-align: start"
+          >
+            <div
+              class="w-full h-40 rounded-lg mb-4 flex items-center justify-center text-sm bg-[var(--color-text)]/5"
+            >
+              Print / GIF
+            </div>
+            <h3 class="text-lg font-semibold mb-1">Nome do projeto</h3>
+            <p class="text-sm mb-3 text-[var(--color-text)]/75">
+              Descrição curta explicando o problema que o projeto resolve.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span
+                class="text-xs px-2 py-1 rounded-full border border-[var(--color-text)]/20"
+                >Electron</span
+              >
+              <span
+                class="text-xs px-2 py-1 rounded-full border border-[var(--color-text)]/20"
+                >SQLite</span
+              >
+            </div>
+            <a href="#" class="text-sm font-medium text-[var(--color-primary)]"
+              >GitHub / Demo →</a
+            >
+          </article>
+        </div>
 
         <button
-          class="px-6 py-3 rounded-lg border border-[var(--color-text)]/20 hover:bg-[var(--color-text)]/10 transition">
-          Contato
+          aria-label="Próximo"
+          class="hidden md:flex items-center justify-center rounded-full absolute -right-6 top-1/2 -translate-y-1/2 w-11 h-11 z-10 border border-[var(--color-text)]/20 bg-[var(--color-background)] hover:bg-[var(--color-text)]/10 transition"
+        >
+          ›
         </button>
+      </div>
+    </section>
 
+    <!-- =========================================================
+       SEÇÃO: TECNOLOGIAS
+  ========================================================== -->
+    <section id="tecnologias" class="relative min-h-[70vh] px-6 md:px-16 py-24">
+      <p class="text-sm mb-1 text-[var(--color-text)]/60">04</p>
+      <h2 class="text-3xl mb-12 text-[var(--color-primary)]">Tecnologias</h2>
+
+      <div class="grid grid-cols-4 md:grid-cols-8 gap-4 md:gap-6 max-w-4xl">
+        <!-- Troque o texto por <img src="..."> das logos reais (devicon.dev ou simpleicons.org) -->
+        <div
+          class="aspect-square flex items-center justify-center text-xs font-medium border-2 border-[var(--color-text)]/20 rounded-2xl backdrop-blur-md"
+        >
+          JS
+        </div>
+        <div
+          class="aspect-square flex items-center justify-center text-xs font-medium border-2 border-[var(--color-text)]/20 rounded-2xl backdrop-blur-md"
+        >
+          TS
+        </div>
+        <div
+          class="aspect-square flex items-center justify-center text-xs font-medium border-2 border-[var(--color-text)]/20 rounded-2xl backdrop-blur-md"
+        >
+          React
+        </div>
+        <div
+          class="aspect-square flex items-center justify-center text-xs font-medium border-2 border-[var(--color-text)]/20 rounded-2xl backdrop-blur-md"
+        >
+          Node
+        </div>
+        <div
+          class="aspect-square flex items-center justify-center text-xs font-medium border-2 border-[var(--color-text)]/20 rounded-2xl backdrop-blur-md"
+        >
+          Flutter
+        </div>
+        <div
+          class="aspect-square flex items-center justify-center text-xs font-medium border-2 border-[var(--color-text)]/20 rounded-2xl backdrop-blur-md"
+        >
+          Python
+        </div>
+        <div
+          class="aspect-square flex items-center justify-center text-xs font-medium border-2 border-[var(--color-text)]/20 rounded-2xl backdrop-blur-md"
+        >
+          Tailwind
+        </div>
+        <div
+          class="aspect-square flex items-center justify-center text-xs font-medium border-2 border-[var(--color-text)]/20 rounded-2xl backdrop-blur-md"
+        >
+          Git
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+       SEÇÃO: CONTATO (estilo terminal)
+  ========================================================== -->
+    <section
+      id="contato"
+      class="relative min-h-[80vh] px-6 md:px-16 py-24 flex flex-col items-center justify-center"
+    >
+      <p
+        class="text-sm mb-1 self-start md:self-auto text-[var(--color-text)]/60"
+      >
+        05
+      </p>
+      <h2 class="text-3xl mb-10 text-[var(--color-primary)]">Contato</h2>
+
+      <div
+        class="w-full max-w-[640px] border-2 border-[var(--color-text)]/20 rounded-2xl overflow-hidden backdrop-blur-md bg-[var(--color-text)]/[0.04]"
+      >
+        <div
+          class="flex items-center gap-2 px-4 py-3 border-b border-[var(--color-text)]/10"
+        >
+          <span class="w-3 h-3 rounded-full bg-red-500"></span>
+          <span class="w-3 h-3 rounded-full bg-yellow-500"></span>
+          <span class="w-3 h-3 rounded-full bg-green-500"></span>
+          <span class="ml-3 text-xs font-code text-[var(--color-text)]/60"
+            >contato@arthur-thuko:~</span
+          >
+        </div>
+
+        <div class="p-6 font-code text-sm leading-7">
+          <p>
+            <span class="text-[var(--color-primary)]">visitante@portfolio</span
+            ><span class="text-[var(--color-text)]/60">:~$</span> whoami
+          </p>
+          <p class="text-[var(--color-text)]/80 mb-3">
+            Arthur / Thuko — Desenvolvedor Full-Stack
+          </p>
+
+          <p>
+            <span class="text-[var(--color-primary)]">visitante@portfolio</span
+            ><span class="text-[var(--color-text)]/60">:~$</span> cat
+            contato.txt
+          </p>
+          <p class="text-[var(--color-text)]/80">
+            email:
+            <a href="mailto:seu@email.com" class="underline">seu@email.com</a>
+          </p>
+          <p class="text-[var(--color-text)]/80">
+            github: <a href="#" class="underline">github.com/seu-usuario</a>
+          </p>
+          <p class="text-[var(--color-text)]/80 mb-3">
+            linkedin:
+            <a href="#" class="underline">linkedin.com/in/seu-usuario</a>
+          </p>
+
+          <p>
+            <span class="text-[var(--color-primary)]">visitante@portfolio</span
+            ><span class="text-[var(--color-text)]/60">:~$</span>
+            send-message --to arthur
+            <span
+              class="inline-block w-[.55em] h-[1.1em] align-text-bottom ml-[2px] bg-[var(--color-primary)] cursor-blink"
+            ></span>
+          </p>
+        </div>
+
+        <form class="px-6 pb-6 flex flex-col gap-3 font-code text-sm">
+          <input
+            type="text"
+            placeholder="nome"
+            class="rounded-lg px-4 py-2 bg-transparent outline-none border border-[var(--color-text)]/20 focus:border-[var(--color-primary)] transition"
+          />
+          <input
+            type="email"
+            placeholder="email"
+            class="rounded-lg px-4 py-2 bg-transparent outline-none border border-[var(--color-text)]/20 focus:border-[var(--color-primary)] transition"
+          />
+          <textarea
+            placeholder="mensagem"
+            rows="3"
+            class="rounded-lg px-4 py-2 bg-transparent outline-none border border-[var(--color-text)]/20 focus:border-[var(--color-primary)] transition resize-none"
+          ></textarea>
+          <button
+            type="submit"
+            class="self-start px-4 py-2 rounded-lg text-white bg-[var(--color-primary)] hover:bg-[var(--color-accent)] transition"
+          >
+            ./enviar.sh
+          </button>
+        </form>
       </div>
 
-    </div>
+      <p class="text-xs mt-8 text-[var(--color-text)]/50">
+        © 2026 Arthur/Thuko — feito com
+        <span class="font-code">&lt;code/&gt;</span> e café.
+      </p>
+    </section>
 
-  </section>
-
-  <div class="flex justify-center pb-6">
-    <div class="w-6 h-6 border-b-2 border-r-2 rotate-45 border-[var(--color-text)]/50 animate-bounce"></div>
-  </div>
-
-  <script src="./scripts/theme.js"></script>
-  <script src="./scripts/components.js"></script>
-</body>
-
+    <script src="./scripts/theme.js"></script>
+    <script src="./scripts/components.js"></script>
+  </body>
 </html>

@@ -1,18 +1,24 @@
-<header class="w-full px-10 flex justify-between items-center border-b border-[var(--color-text)]/10 backdrop-blur-md">
-
-  <img src="../public/images/Logo.png" alt="Logo" class="w-16 h-16">
+<header class="navbar fixed top-0 left-0 z-50 w-full px-10 flex justify-between items-center border-b border-[var(--color-text)]/10 backdrop-blur-md bg-[var(--color-bg)]/70">
+  <a href="../../src/index.html" class="flex items-center gap-2">
+    <img src="../public/images/Logo.png" alt="Logo" class="w-16 h-16" />
+  </a>
 
   <nav class="hidden md:flex gap-8 text-sm">
-    <a href="#" class="hover:text-[var(--color-accent)]">Início</a>
-    <a href="#" class="hover:text-[var(--color-accent)]">Sobre</a>
-    <a href="#" class="hover:text-[var(--color-accent)]">Projetos</a>
-    <a href="#" class="hover:text-[var(--color-accent)]">Tecnologias</a>
-    <a href="#" class="hover:text-[var(--color-accent)]">Contato</a>
+    <a href="#inicio" class="hover:text-[var(--color-accent)]"
+      >Início</a
+    >
+    <a href="#sobre" class="hover:text-[var(--color-accent)]">Sobre</a>
+    <a href="#projetos" class="hover:text-[var(--color-accent)]">Projetos</a>
+    <a href="#tecnologias" class="hover:text-[var(--color-accent)]"
+      >Tecnologias</a
+    >
+    <a href="#contato" class="hover:text-[var(--color-accent)]">Contato</a>
   </nav>
 
-  <button id="theme-toggle"
-    class="px-4 py-2 border border-[var(--color-text)]/20 rounded-lg text-sm hover:bg-[var(--color-text)]/10 transition">
+  <button
+    id="theme-toggle"
+    class="px-4 py-2 border border-[var(--color-text)]/20 rounded-lg text-sm hover:bg-[var(--color-text)]/10 transition"
+  >
     🌙
   </button>
-
 </header>

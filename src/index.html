@@ -21,129 +21,451 @@
 
     <div id="sobre"></div>
 
-    <section id="projetos" class="relative min-h-[90vh] px-6 md:px-16 py-24">
+    <section id="projetos" class="relative min-h-[90vh] px-6 md:px-16">
       <div class="flex items-end justify-between mb-10 flex-wrap gap-4">
         <div>
           <p class="text-sm mb-1 text-[var(--color-text)]/60">03</p>
           <h2 class="text-3xl text-[var(--color-primary)]">Meus projetos</h2>
         </div>
-        <a
-          href="https://github.com/ArthurThuko"
-          target="_blank"
-          class="text-sm underline underline-offset-4 text-[var(--color-primary)]"
-          >Ver todos os projetos →</a
-        >
       </div>
 
-      <div class="relative">
+      <div class="projetos-wrapper relative">
         <button
-          aria-label="Anterior"
-          class="hidden md:flex items-center justify-center rounded-full absolute -left-6 top-1/2 -translate-y-1/2 w-11 h-11 z-10 border border-[var(--color-text)]/20 bg-[var(--color-background)] hover:bg-[var(--color-text)]/10 transition"
+          id="prevBtn"
+          aria-label="Projeto anterior"
+          class="nav-btn hidden md:flex items-center justify-center rounded-full absolute -left-6 top-1/2 w-11 h-11 z-10 border border-[var(--color-text)]/20 bg-[var(--color-background)]"
         >
           ‹
         </button>
 
         <div
+          id="projetos-track"
           class="flex gap-6 overflow-x-auto pb-4"
           style="scroll-snap-type: x mandatory"
+          tabindex="0"
+          role="region"
+          aria-label="Carrossel de projetos"
         >
           <article
-            class="flex-shrink-0 w-[300px] border-2 border-[var(--color-text)]/20 rounded-2xl p-5 backdrop-blur-md"
+            class="project-card flex-shrink-0 w-[300px] border-2 border-[var(--color-text)]/20 rounded-2xl p-5 backdrop-blur-md"
             style="scroll-snap-align: start"
           >
             <div
-              class="w-full h-40 rounded-lg mb-4 flex items-center justify-center text-sm bg-[var(--color-text)]/5"
+              class="thumb-wrap w-full h-40 rounded-lg mb-4 flex items-center justify-center text-sm bg-[var(--color-text)]/5"
             >
-              Print / GIF
+              <img
+                src="../public/projects/AquinozBot.jpg"
+                alt="Logo AquinozBot"
+                class="w-full h-full object-cover rounded-lg"
+                loading="lazy"
+              />
             </div>
-            <h3 class="text-lg font-semibold mb-1">Nome do projeto</h3>
+            <h3 class="text-lg font-semibold mb-1">Aquinoz Bot</h3>
             <p class="text-sm mb-3 text-[var(--color-text)]/75">
-              Descrição curta explicando o problema que o projeto resolve.
+              ChatBot integrado com IA no Telegram. Usado para guardar conteúdos
+              de matérias (texto ou foto), criar resumos, gerar questionários,
+              seja em texto ou áudio.
             </p>
             <div class="flex flex-wrap gap-2 mb-4">
               <span
-                class="text-xs px-2 py-1 rounded-full border border-[var(--color-text)]/20"
-                >React</span
+                class="tag-chip text-xs px-2 py-1 rounded-full border border-[var(--color-text)]/20"
+                >Python (Flask)</span
               >
               <span
-                class="text-xs px-2 py-1 rounded-full border border-[var(--color-text)]/20"
-                >Node.js</span
-              >
-            </div>
-            <a href="#" class="text-sm font-medium text-[var(--color-primary)]"
-              >GitHub / Demo →</a
-            >
-          </article>
-
-          <article
-            class="flex-shrink-0 w-[300px] border-2 border-[var(--color-text)]/20 rounded-2xl p-5 backdrop-blur-md"
-            style="scroll-snap-align: start"
-          >
-            <div
-              class="w-full h-40 rounded-lg mb-4 flex items-center justify-center text-sm bg-[var(--color-text)]/5"
-            >
-              Print / GIF
-            </div>
-            <h3 class="text-lg font-semibold mb-1">Nome do projeto</h3>
-            <p class="text-sm mb-3 text-[var(--color-text)]/75">
-              Descrição curta explicando o problema que o projeto resolve.
-            </p>
-            <div class="flex flex-wrap gap-2 mb-4">
-              <span
-                class="text-xs px-2 py-1 rounded-full border border-[var(--color-text)]/20"
-                >Flutter</span
-              >
-              <span
-                class="text-xs px-2 py-1 rounded-full border border-[var(--color-text)]/20"
-                >Firebase</span
-              >
-            </div>
-            <a href="#" class="text-sm font-medium text-[var(--color-primary)]"
-              >GitHub / Demo →</a
-            >
-          </article>
-
-          <article
-            class="flex-shrink-0 w-[300px] border-2 border-[var(--color-text)]/20 rounded-2xl p-5 backdrop-blur-md"
-            style="scroll-snap-align: start"
-          >
-            <div
-              class="w-full h-40 rounded-lg mb-4 flex items-center justify-center text-sm bg-[var(--color-text)]/5"
-            >
-              Print / GIF
-            </div>
-            <h3 class="text-lg font-semibold mb-1">Nome do projeto</h3>
-            <p class="text-sm mb-3 text-[var(--color-text)]/75">
-              Descrição curta explicando o problema que o projeto resolve.
-            </p>
-            <div class="flex flex-wrap gap-2 mb-4">
-              <span
-                class="text-xs px-2 py-1 rounded-full border border-[var(--color-text)]/20"
-                >Electron</span
-              >
-              <span
-                class="text-xs px-2 py-1 rounded-full border border-[var(--color-text)]/20"
+                class="tag-chip text-xs px-2 py-1 rounded-full border border-[var(--color-text)]/20"
                 >SQLite</span
               >
             </div>
-            <a href="#" class="text-sm font-medium text-[var(--color-primary)]"
-              >GitHub / Demo →</a
+            <a
+              href="https://github.com/ArthurThuko/Aquinoz_Bot"
+              target="_blank"
+              class="go-link text-sm font-medium text-[var(--color-primary)]"
             >
+              GitHub
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M5 12h14M13 6l6 6-6 6" />
+              </svg>
+            </a>
+          </article>
+
+          <article
+            class="project-card flex-shrink-0 w-[300px] border-2 border-[var(--color-text)]/20 rounded-2xl p-5 backdrop-blur-md"
+            style="scroll-snap-align: start"
+          >
+            <div
+              class="thumb-wrap w-full h-40 rounded-lg mb-4 flex items-center justify-center text-sm bg-[var(--color-text)]/5"
+            >
+              <img
+                src="../public/projects/Lux.jpg"
+                alt="Logo Lux"
+                class="w-full h-full object-cover rounded-lg"
+                loading="lazy"
+              />
+            </div>
+            <h3 class="text-lg font-semibold mb-1">Lux</h3>
+            <p class="text-sm mb-3 text-[var(--color-text)]/75">
+              Jogo de plataforma 2D/Puzzle para o projeto de extensão do 2º
+              período do curso de Sistemas de Informação. Uma cientista que usa
+              o conceito de fenômenos ondulatórios para derrotar inimigos das
+              sombras.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span
+                class="tag-chip text-xs px-2 py-1 rounded-full border border-[var(--color-text)]/20"
+                >C#</span
+              >
+              <span
+                class="tag-chip text-xs px-2 py-1 rounded-full border border-[var(--color-text)]/20"
+                >Unity</span
+              >
+            </div>
+            <a
+              href="https://github.com/ArthurThuko/ProjetoLux"
+              target="_blank"
+              class="go-link text-sm font-medium text-[var(--color-primary)]"
+            >
+              GitHub
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M5 12h14M13 6l6 6-6 6" />
+              </svg>
+            </a>
+          </article>
+
+          <article
+            class="project-card flex-shrink-0 w-[300px] border-2 border-[var(--color-text)]/20 rounded-2xl p-5 backdrop-blur-md"
+            style="scroll-snap-align: start"
+          >
+            <div
+              class="thumb-wrap w-full h-40 rounded-lg mb-4 flex items-center justify-center text-sm bg-[var(--color-text)]/5"
+            >
+              <img
+                src="../public/projects/GameWooord.png"
+                alt="Tela GameWooord"
+                class="w-full h-full object-cover rounded-lg"
+                loading="lazy"
+              />
+            </div>
+            <h3 class="text-lg font-semibold mb-1">GameWooord</h3>
+            <p class="text-sm mb-3 text-[var(--color-text)]/75">
+              Um jogo simples, divertido e rápido onde o seu desafio é digitar o
+              máximo de palavras válidas antes que o tempo acabe!
+            </p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span
+                class="tag-chip text-xs px-2 py-1 rounded-full border border-[var(--color-text)]/20"
+                >HTML/CSS/JS</span
+              >
+              <span
+                class="tag-chip text-xs px-2 py-1 rounded-full border border-[var(--color-text)]/20"
+                >Vercel</span
+              >
+            </div>
+            <a
+              href="https://gamewoord.vercel.app"
+              target="_blank"
+              class="go-link text-sm font-medium text-[var(--color-primary)]"
+            >
+              Site
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M5 12h14M13 6l6 6-6 6" />
+              </svg>
+            </a>
+          </article>
+
+          <article
+            class="project-card flex-shrink-0 w-[300px] border-2 border-[var(--color-text)]/20 rounded-2xl p-5 backdrop-blur-md"
+            style="scroll-snap-align: start"
+          >
+            <div
+              class="thumb-wrap w-full h-40 rounded-lg mb-4 flex items-center justify-center text-sm bg-[var(--color-text)]/5"
+            >
+              <img
+                src="../public/projects/AcademiaBF.jpeg"
+                alt="Logo Academia BF"
+                class="w-full h-full object-cover rounded-lg"
+                loading="lazy"
+              />
+            </div>
+            <h3 class="text-lg font-semibold mb-1">Academia Blitz Forma</h3>
+            <p class="text-sm mb-3 text-[var(--color-text)]/75">
+              Site oficial da academia Blitz Forma, com informações sobre
+              planos, horários, equipe e contato. Além do formulário de
+              inscrição para novos alunos e avaliações.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span
+                class="tag-chip text-xs px-2 py-1 rounded-full border border-[var(--color-text)]/20"
+                >HTML/CSS/JS</span
+              >
+              <span
+                class="tag-chip text-xs px-2 py-1 rounded-full border border-[var(--color-text)]/20"
+                >PHP</span
+              >
+              <span
+                class="tag-chip text-xs px-2 py-1 rounded-full border border-[var(--color-text)]/20"
+                >MySQL</span
+              >
+            </div>
+            <a
+              href="https://blitzforma.com.br"
+              target="_blank"
+              class="go-link text-sm font-medium text-[var(--color-primary)]"
+            >
+              Site
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M5 12h14M13 6l6 6-6 6" />
+              </svg>
+            </a>
+          </article>
+
+          <article
+            class="project-card flex-shrink-0 w-[300px] border-2 border-[var(--color-text)]/20 rounded-2xl p-5 backdrop-blur-md"
+            style="scroll-snap-align: start"
+          >
+            <div
+              class="thumb-wrap w-full h-40 rounded-lg mb-4 flex items-center justify-center text-sm bg-[var(--color-text)]/5"
+            >
+              <img
+                src="../public/projects/AlphaLanches.jpg"
+                alt="Tela AlphaLanches"
+                class="w-full h-full object-cover rounded-lg"
+                loading="lazy"
+              />
+            </div>
+            <h3 class="text-lg font-semibold mb-1">AlphaLanches</h3>
+            <p class="text-sm mb-3 text-[var(--color-text)]/75">
+              Sistema web para a lanchonete da escola Sete de Setembro em Paulo
+              Afonso - BA. Contendo a tela de Cadastro de Usuários, Estoque,
+              PDV, Históricos, Financeiro, entre outros.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span
+                class="tag-chip text-xs px-2 py-1 rounded-full border border-[var(--color-text)]/20"
+                >PHP(Laravel)</span
+              >
+              <span
+                class="tag-chip text-xs px-2 py-1 rounded-full border border-[var(--color-text)]/20"
+                >MySQL</span
+              >
+              <span
+                class="tag-chip text-xs px-2 py-1 rounded-full border border-[var(--color-text)]/20"
+                >Bootstrap</span
+              >
+            </div>
+            <a
+              href="https://github.com/Elliton-Luis/alpha-lanches"
+              target="_blank"
+              class="go-link text-sm font-medium text-[var(--color-primary)]"
+            >
+              GitHub
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M5 12h14M13 6l6 6-6 6" />
+              </svg>
+            </a>
+          </article>
+
+          <article
+            class="project-card flex-shrink-0 w-[300px] border-2 border-[var(--color-text)]/20 rounded-2xl p-5 backdrop-blur-md"
+            style="scroll-snap-align: start"
+          >
+            <div
+              class="thumb-wrap w-full h-40 rounded-lg mb-4 flex items-center justify-center text-sm bg-[var(--color-text)]/5"
+            >
+              <img
+                src="../public/projects/Cooruja.png"
+                alt="Logo Cooruja"
+                class="w-full h-full object-cover rounded-lg"
+                loading="lazy"
+              />
+            </div>
+            <h3 class="text-lg font-semibold mb-1">Cooruja</h3>
+            <p class="text-sm mb-3 text-[var(--color-text)]/75">
+              A plataforma Cooruja possibilita que os cidadãos façam denúncias e
+              auxiliem as autoridades no monitoramento de irregularidades em
+              estabelecimentos e espaços públicos.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span
+                class="tag-chip text-xs px-2 py-1 rounded-full border border-[var(--color-text)]/20"
+                >Java (Spring Boot)</span
+              >
+              <span
+                class="tag-chip text-xs px-2 py-1 rounded-full border border-[var(--color-text)]/20"
+                >Maven</span
+              >
+            </div>
+            <a
+              href="https://github.com/ProjetoHardTech/CorujaFrontend"
+              target="_blank"
+              class="go-link text-sm font-medium text-[var(--color-primary)]"
+            >
+              GitHub
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M5 12h14M13 6l6 6-6 6" />
+              </svg>
+            </a>
+          </article>
+
+          <article
+            class="project-card flex-shrink-0 w-[300px] border-2 border-[var(--color-text)]/20 rounded-2xl p-5 backdrop-blur-md"
+            style="scroll-snap-align: start"
+          >
+            <div
+              class="thumb-wrap w-full h-40 rounded-lg mb-4 flex items-center justify-center text-sm bg-[var(--color-text)]/5"
+            >
+              <img
+                src="../public/projects/AlphaControl.png"
+                alt="Logo AlphaControl"
+                class="w-full h-full object-cover rounded-lg"
+                loading="lazy"
+              />
+            </div>
+            <h3 class="text-lg font-semibold mb-1">AlphaControl</h3>
+            <p class="text-sm mb-3 text-[var(--color-text)]/75">
+              Sistema desktop usado para informatizar e organizar os processos
+              de vendas, controle de estoque e movimentação financeira de um
+              comércio.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span
+                class="tag-chip text-xs px-2 py-1 rounded-full border border-[var(--color-text)]/20"
+                >Java (Swing)</span
+              >
+            </div>
+            <a
+              href="https://github.com/ArthurThuko/AlphaControl"
+              target="_blank"
+              class="go-link text-sm font-medium text-[var(--color-primary)]"
+            >
+              GitHub
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M5 12h14M13 6l6 6-6 6" />
+              </svg>
+            </a>
+          </article>
+
+          <article
+            class="project-card flex-shrink-0 w-[300px] border-2 border-[var(--color-text)]/20 rounded-2xl p-5 backdrop-blur-md"
+            style="scroll-snap-align: start"
+          >
+            <div
+              class="thumb-wrap w-full h-40 rounded-lg mb-4 flex items-center justify-center text-sm bg-[var(--color-text)]/5"
+            >
+              <img
+                src="../public/projects/JuriSimulado.jpg"
+                alt="Logo JuriSimulado"
+                class="w-full h-full object-cover rounded-lg"
+                loading="lazy"
+              />
+            </div>
+            <h3 class="text-lg font-semibold mb-1">Juri Simulado - Votação</h3>
+            <p class="text-sm mb-3 text-[var(--color-text)]/75">
+              Sistema de votação online para simulações de júri popular em
+              ambientes acadêmicos ou eventos jurídicos, com votos anônimos e
+              resultados em tempo real.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span
+                class="tag-chip text-xs px-2 py-1 rounded-full border border-[var(--color-text)]/20"
+                >Node.JS</span
+              >
+              <span
+                class="tag-chip text-xs px-2 py-1 rounded-full border border-[var(--color-text)]/20"
+                >Bootstrap</span
+              >
+              <span
+                class="tag-chip text-xs px-2 py-1 rounded-full border border-[var(--color-text)]/20"
+                >HTML/CSS/JS</span
+              >
+            </div>
+            <a
+              href="https://github.com/ArthurThuko/Votacao_Direito"
+              target="_blank"
+              class="go-link text-sm font-medium text-[var(--color-primary)]"
+            >
+              Site
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M5 12h14M13 6l6 6-6 6" />
+              </svg>
+            </a>
           </article>
         </div>
 
         <button
-          aria-label="Próximo"
-          class="hidden md:flex items-center justify-center rounded-full absolute -right-6 top-1/2 -translate-y-1/2 w-11 h-11 z-10 border border-[var(--color-text)]/20 bg-[var(--color-background)] hover:bg-[var(--color-text)]/10 transition"
+          id="nextBtn"
+          aria-label="Próximo projeto"
+          class="nav-btn hidden md:flex items-center justify-center rounded-full absolute -right-6 top-1/2 w-11 h-11 z-10 border border-[var(--color-text)]/20 bg-[var(--color-background)]"
         >
           ›
         </button>
       </div>
+
+      <div id="dots" class="flex md:hidden justify-center gap-2 mt-4"></div>
+
+      <a
+        href="https://github.com/ArthurThuko"
+        target="_blank"
+        class="text-sm underline underline-offset-4 text-[var(--color-primary)] go-link ml-5"
+        >Ver todos os projetos
+      </a>
     </section>
 
-    <!-- =========================================================
-       SEÇÃO: TECNOLOGIAS
-  ========================================================== -->
     <section id="tecnologias" class="relative min-h-[70vh] px-6 md:px-16 py-24">
       <p class="text-sm mb-1 text-[var(--color-text)]/60">04</p>
       <h2 class="text-3xl mb-12 text-[var(--color-primary)]">Tecnologias</h2>
@@ -291,5 +613,6 @@
     <script src="./scripts/theme.js"></script>
     <script src="./scripts/components.js"></script>
     <script src="./scripts/mapWrap.js"></script>
+    <script src="./scripts/listCard.js"></script>
   </body>
 </html>

@@ -93,6 +93,7 @@
 
       <div
         class="hidden md:block relative mx-auto w-full max-w-[1100px] h-[560px]"
+        id="map-wrap"
       >
         <svg
           class="absolute inset-0 w-full h-full pointer-events-none"
@@ -100,120 +101,135 @@
           preserveAspectRatio="none"
         >
           <line
+            class="map-line"
+            data-node="1"
             x1="550"
             y1="280"
             x2="180"
             y2="90"
             stroke="currentColor"
-            class="text-[var(--color-text)]/25"
             stroke-width="1.5"
           />
           <line
+            class="map-line"
+            data-node="2"
             x1="550"
             y1="280"
             x2="470"
             y2="45"
             stroke="currentColor"
-            class="text-[var(--color-text)]/25"
             stroke-width="1.5"
           />
           <line
+            class="map-line"
+            data-node="3"
             x1="550"
             y1="280"
             x2="820"
             y2="110"
             stroke="currentColor"
-            class="text-[var(--color-text)]/25"
             stroke-width="1.5"
           />
           <line
+            class="map-line"
+            data-node="4"
             x1="550"
             y1="280"
             x2="130"
             y2="280"
             stroke="currentColor"
-            class="text-[var(--color-text)]/25"
             stroke-width="1.5"
           />
           <line
+            class="map-line"
+            data-node="5"
             x1="550"
             y1="280"
             x2="240"
             y2="470"
             stroke="currentColor"
-            class="text-[var(--color-text)]/25"
             stroke-width="1.5"
           />
           <line
+            class="map-line"
+            data-node="6"
             x1="550"
             y1="280"
             x2="510"
             y2="510"
             stroke="currentColor"
-            class="text-[var(--color-text)]/25"
             stroke-width="1.5"
           />
           <line
+            class="map-line"
+            data-node="7"
             x1="550"
             y1="280"
             x2="850"
             y2="460"
             stroke="currentColor"
-            class="text-[var(--color-text)]/25"
             stroke-width="1.5"
           />
         </svg>
 
         <div
-          class="absolute text-3xl md:text-4xl font-semibold whitespace-nowrap text-[var(--color-primary)]"
-          style="left: 550px; top: 280px; transform: translate(-50%, -50%)"
+          class="map-center absolute text-3xl md:text-4xl font-semibold whitespace-nowrap text-[var(--color-primary)] bg-[var(--color-background)] border-2 border-[var(--color-text)] rounded-2xl px-4 py-2 backdrop-blur-md cursor-default"
+          style="left: 550px; top: 280px"
         >
           Arthur/Thuko
         </div>
 
         <div
-          class="absolute text-sm text-center w-[170px]"
-          style="left: 180px; top: 90px; transform: translate(-50%, -50%)"
+          class="map-node absolute text-sm text-center w-[170px] bg-[var(--color-background)] border-2 border-[var(--color-text)] rounded-2xl px-4 py-2 backdrop-blur-md cursor-default"
+          data-node="1"
+          style="left: 180px; top: 90px"
         >
           <p class="font-medium">Téc. de Informática</p>
           <p class="text-[var(--color-text)]/70">IFBA — BA</p>
         </div>
 
         <div
-          class="absolute text-sm text-center w-[200px]"
-          style="left: 470px; top: 45px; transform: translate(-50%, -50%)"
+          class="map-node absolute text-sm text-center w-[200px] bg-[var(--color-background)] border-2 border-[var(--color-text)] rounded-2xl px-4 py-2 backdrop-blur-md cursor-default"
+          data-node="2"
+          style="left: 470px; top: 45px"
         >
           <p class="font-medium">Tutor de Programação</p>
           <p class="text-[var(--color-text)]/70">CESAR — PE</p>
         </div>
 
         <div
-          class="absolute text-sm text-center w-[200px]"
-          style="left: 820px; top: 110px; transform: translate(-50%, -50%)"
+          class="map-node absolute text-sm text-center w-[200px] bg-[var(--color-background)] border-2 border-[var(--color-text)] rounded-2xl px-4 py-2 backdrop-blur-md cursor-default"
+          data-node="3"
+          style="left: 820px; top: 110px"
         >
-          <p class="font-medium">Tutor de Programação</p>
-          <p class="text-[var(--color-text)]/70">CESAR — PE</p>
+          <p class="font-medium">Técnico de Informática</p>
+          <p class="text-[var(--color-text)]/70">
+            Secretária de Saúde - Água Branca (AL)
+          </p>
         </div>
 
         <div
-          class="absolute text-sm text-center w-[190px]"
-          style="left: 130px; top: 280px; transform: translate(-50%, -50%)"
+          class="map-node absolute text-sm text-center w-[190px] bg-[var(--color-background)] border-2 border-[var(--color-text)] rounded-2xl px-4 py-2 backdrop-blur-md cursor-default"
+          data-node="4"
+          style="left: 130px; top: 280px"
         >
           <p class="font-medium">Estudante de Sistemas de Informação</p>
           <p class="text-[var(--color-text)]/70">UNIRIOS — BA</p>
         </div>
 
         <div
-          class="absolute text-sm text-center w-[180px]"
-          style="left: 240px; top: 470px; transform: translate(-50%, -50%)"
+          class="map-node absolute text-sm text-center w-[180px] bg-[var(--color-background)] border-2 border-[var(--color-text)] rounded-2xl px-4 py-2 backdrop-blur-md cursor-default"
+          data-node="5"
+          style="left: 240px; top: 470px"
         >
           <p class="font-medium">Trabalho em Equipe</p>
           <p class="text-[var(--color-text)]/70">Comunicação · Proatividade</p>
         </div>
 
         <div
-          class="absolute text-sm text-center w-[200px]"
-          style="left: 510px; top: 520px; transform: translate(-50%, -50%)"
+          class="map-node absolute text-sm text-center w-[200px] bg-[var(--color-background)] border-2 border-[var(--color-text)] rounded-2xl px-4 py-2 backdrop-blur-md cursor-default"
+          data-node="6"
+          style="left: 510px; top: 520px"
         >
           <p class="font-medium">Pensamento Lógico</p>
           <p class="text-[var(--color-text)]/70">
@@ -222,41 +238,42 @@
         </div>
 
         <div
-          class="absolute text-sm text-center w-[200px]"
-          style="left: 850px; top: 460px; transform: translate(-50%, -50%)"
+          class="map-node absolute text-sm text-center w-[200px] bg-[var(--color-background)] border-2 border-[var(--color-text)] rounded-2xl px-4 py-2 backdrop-blur-md cursor-default"
+          data-node="7"
+          style="left: 850px; top: 460px"
         >
           <p class="font-medium">Estagiário Desenv. Mobile</p>
           <p class="text-[var(--color-text)]/70">Authentic — LTDA</p>
         </div>
       </div>
 
-      <div class="md:hidden grid grid-cols-1 gap-4">
+      <div class="md:hidden grid grid-cols-1 gap-4" id="cards-wrap">
         <div
-          class="border-2 border-[var(--color-text)]/20 rounded-2xl p-4 backdrop-blur-md"
+          class="about-card border-2 border-[var(--color-text)]/20 rounded-2xl p-4 backdrop-blur-md"
         >
           <p class="font-medium">Téc. de Informática</p>
           <p class="text-sm text-[var(--color-text)]/70">IFBA — BA</p>
         </div>
         <div
-          class="border-2 border-[var(--color-text)]/20 rounded-2xl p-4 backdrop-blur-md"
+          class="about-card border-2 border-[var(--color-text)]/20 rounded-2xl p-4 backdrop-blur-md"
         >
           <p class="font-medium">Estudante de Sistemas de Informação</p>
           <p class="text-sm text-[var(--color-text)]/70">UNIRIOS — BA</p>
         </div>
         <div
-          class="border-2 border-[var(--color-text)]/20 rounded-2xl p-4 backdrop-blur-md"
+          class="about-card border-2 border-[var(--color-text)]/20 rounded-2xl p-4 backdrop-blur-md"
         >
           <p class="font-medium">Tutor de Programação</p>
           <p class="text-sm text-[var(--color-text)]/70">CESAR — PE</p>
         </div>
         <div
-          class="border-2 border-[var(--color-text)]/20 rounded-2xl p-4 backdrop-blur-md"
+          class="about-card border-2 border-[var(--color-text)]/20 rounded-2xl p-4 backdrop-blur-md"
         >
           <p class="font-medium">Estagiário Desenv. Mobile</p>
           <p class="text-sm text-[var(--color-text)]/70">Authentic — LTDA</p>
         </div>
         <div
-          class="border-2 border-[var(--color-text)]/20 rounded-2xl p-4 backdrop-blur-md"
+          class="about-card border-2 border-[var(--color-text)]/20 rounded-2xl p-4 backdrop-blur-md"
         >
           <p class="font-medium">Soft skills</p>
           <p class="text-sm text-[var(--color-text)]/70">
@@ -264,29 +281,8 @@
           </p>
         </div>
       </div>
-
-      <div class="flex flex-wrap gap-4 justify-center mt-16">
-        <button
-          class="px-6 py-3 rounded-lg border border-[var(--color-text)]/20 hover:bg-[var(--color-text)]/10 transition"
-        >
-          Baixar currículo
-        </button>
-        <button
-          class="px-6 py-3 rounded-lg border border-[var(--color-text)]/20 hover:bg-[var(--color-text)]/10 transition"
-        >
-          Ver certificados
-        </button>
-        <button
-          class="px-6 py-3 rounded-lg border border-[var(--color-text)]/20 hover:bg-[var(--color-text)]/10 transition"
-        >
-          Falar comigo
-        </button>
-      </div>
     </section>
 
-    <!-- =========================================================
-       SEÇÃO: PROJETOS
-  ========================================================== -->
     <section id="projetos" class="relative min-h-[90vh] px-6 md:px-16 py-24">
       <div class="flex items-end justify-between mb-10 flex-wrap gap-4">
         <div>
@@ -555,5 +551,6 @@
 
     <script src="./scripts/theme.js"></script>
     <script src="./scripts/components.js"></script>
+    <script src="./scripts/mapWrap.js"></script>
   </body>
 </html>

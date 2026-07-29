@@ -6,7 +6,11 @@ async function loadComponent(id, file) {
 
 async function init() {
   await loadComponent("navbar", "./components/navbar.html");
+  await loadComponent("inicio", "./components/inicio.html");
+  await loadComponent("sobre", "./components/sobre.html");
+
   initThemeToggle();
+  initMapWrap();
 }
 
 init();

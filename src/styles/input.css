@@ -328,3 +328,47 @@ h1 {
     transition: none !important;
   }
 }
+
+.tech-card {
+  width: 100%;
+  max-width: 200px;
+  aspect-ratio: 1 / 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  padding: 0.75rem 0.5rem;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text);
+  border: 2px solid color-mix(in srgb, var(--tech-color) 45%, transparent);
+  background: linear-gradient(145deg,
+      color-mix(in srgb, var(--tech-color) 12%, transparent),
+      transparent 70%);
+  border-radius: 1rem;
+  backdrop-filter: blur(10px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease, background 0.3s ease;
+  cursor: default;
+}
+
+.tech-icon {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.tech-card:hover {
+  transform: translateY(-4px) scale(1.05);
+  border-color: var(--tech-color);
+  box-shadow: 0 8px 24px -6px color-mix(in srgb, var(--tech-color) 60%, transparent);
+  background: linear-gradient(145deg,
+      color-mix(in srgb, var(--tech-color) 25%, transparent),
+      transparent 80%);
+}
+
+.tech-card:hover .tech-icon {
+  transform: scale(1.1);
+}

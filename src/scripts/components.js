@@ -9,6 +9,8 @@ async function init() {
   await loadComponent("inicio", "./components/inicio.html");
   await loadComponent("sobre", "./components/sobre.html");
   await loadComponent("tecnologias", "./components/tecnologias.html");
+  await loadComponent("contato", "./components/contato.html");
+  await loadComponent("footer", "./components/footer.html");
 
   initThemeToggle();
   initMapWrap();

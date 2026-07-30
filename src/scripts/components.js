@@ -5,12 +5,12 @@ async function loadComponent(id, file) {
 }
 
 async function init() {
-  await loadComponent("navbar", "./components/navbar.html");
-  await loadComponent("inicio", "./components/inicio.html");
-  await loadComponent("sobre", "./components/sobre.html");
-  await loadComponent("tecnologias", "./components/tecnologias.html");
-  await loadComponent("contato", "./components/contato.html");
-  await loadComponent("footer", "./components/footer.html");
+  await loadComponent("navbar", "src/components/navbar.html");
+  await loadComponent("inicio", "src/components/inicio.html");
+  await loadComponent("sobre", "src/components/sobre.html");
+  await loadComponent("tecnologias", "src/components/tecnologias.html");
+  await loadComponent("contato", "src/components/contato.html");
+  await loadComponent("footer", "src/components/footer.html");
 
   initThemeToggle();
   initMapWrap();

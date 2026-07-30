@@ -1,18 +1,45 @@
-<header class="w-full px-10 flex justify-between items-center border-b border-[var(--color-text)]/10 backdrop-blur-md">
-
-  <img src="../public/images/Logo.png" alt="Logo" class="w-16 h-16">
+<header class="navbar fixed top-0 left-0 z-50 w-full px-4 sm:px-6 md:px-10 py-2 flex justify-between items-center border-b border-[var(--color-text)]/10 backdrop-blur-md bg-[var(--color-bg)]/70">
+  <a href="../../src/index.html" class="flex items-center gap-2 shrink-0">
+    <img src="../public/images/Logo.png" alt="Logo" class="w-12 h-12 md:w-16 md:h-16" />
+  </a>
 
   <nav class="hidden md:flex gap-8 text-sm">
-    <a href="#" class="hover:text-[var(--color-accent)]">Início</a>
-    <a href="#" class="hover:text-[var(--color-accent)]">Sobre</a>
-    <a href="#" class="hover:text-[var(--color-accent)]">Projetos</a>
-    <a href="#" class="hover:text-[var(--color-accent)]">Tecnologias</a>
-    <a href="#" class="hover:text-[var(--color-accent)]">Contato</a>
+    <a href="#inicio" class="hover:text-[var(--color-accent)]">Início</a>
+    <a href="#sobre" class="hover:text-[var(--color-accent)]">Sobre</a>
+    <a href="#projetos" class="hover:text-[var(--color-accent)]">Projetos</a>
+    <a href="#tecnologias" class="hover:text-[var(--color-accent)]">Tecnologias</a>
+    <a href="#contato" class="hover:text-[var(--color-accent)]">Contato</a>
   </nav>
 
-  <button id="theme-toggle"
-    class="px-4 py-2 border border-[var(--color-text)]/20 rounded-lg text-sm hover:bg-[var(--color-text)]/10 transition">
-    🌙
-  </button>
+  <div class="flex items-center gap-2">
+    <button
+      id="theme-toggle"
+      class="px-3 py-2 md:px-4 md:py-2 border border-[var(--color-text)]/20 rounded-lg text-sm hover:bg-[var(--color-text)]/10 transition"
+      aria-label="Alternar tema"
+    >
+      🌙
+    </button>
 
+    <input type="checkbox" id="mobile-menu-toggle" class="peer hidden" />
+    <label
+      for="mobile-menu-toggle"
+      class="md:hidden flex flex-col justify-center items-center gap-1 w-10 h-10 border border-[var(--color-text)]/20 rounded-lg cursor-pointer"
+      aria-label="Abrir menu"
+    >
+      <span class="block w-5 h-0.5 bg-[var(--color-text)] transition"></span>
+      <span class="block w-5 h-0.5 bg-[var(--color-text)] transition"></span>
+      <span class="block w-5 h-0.5 bg-[var(--color-text)] transition"></span>
+    </label>
+
+    <nav
+      id="mobile-menu"
+      class="hidden peer-checked:flex md:hidden flex-col gap-1 text-sm absolute top-full left-0 w-full px-6 py-4 border-b border-[var(--color-text)]/10 backdrop-blur-md bg-[var(--color-background)]"
+    >
+      <a href="#inicio" onclick="document.getElementById('mobile-menu-toggle').checked=false" class="py-2.5 hover:text-[var(--color-accent)]">Início</a>
+      <a href="#sobre" onclick="document.getElementById('mobile-menu-toggle').checked=false" class="py-2.5 hover:text-[var(--color-accent)]">Sobre</a>
+      <a href="#projetos" onclick="document.getElementById('mobile-menu-toggle').checked=false" class="py-2.5 hover:text-[var(--color-accent)]">Projetos</a>
+      <a href="#tecnologias" onclick="document.getElementById('mobile-menu-toggle').checked=false" class="py-2.5 hover:text-[var(--color-accent)]">Tecnologias</a>
+      <a href="#contato" onclick="document.getElementById('mobile-menu-toggle').checked=false" class="py-2.5 hover:text-[var(--color-accent)]">Contato</a>
+    </nav>
+  </div>
 </header>

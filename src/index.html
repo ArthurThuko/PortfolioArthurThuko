@@ -1,81 +1,481 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfólio - Arthur/Thuko</title>
 
-<head>
-  <meta charset="UTF-8">
-  <title>Portfólio - Arthur/Thuko</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@500;600;700&family=Fira+Code&display=swap"
+      rel="stylesheet"
+    />
+    <link href="./styles/output.css" rel="stylesheet" />
+    <link rel="icon" type="image/x-icon" href="../public/icons/Logo.ico" />
+  </head>
 
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@500;600;700&family=Fira+Code&display=swap"
-    rel="stylesheet">
-  <link href="./styles/output.css" rel="stylesheet">
-  <link rel="icon" type="image/x-icon" href="../public/icons/Logo.ico">
-</head>
+  <body
+    class="bg-[var(--color-background)] text-[var(--color-text)] overflow-x-hidden"
+  >
+    <div id="navbar"></div>
 
-<body class="bg-[var(--color-background)] text-[var(--color-text)] overflow-x-hidden">
-  <div id="navbar"></div>
+    <div id="inicio"></div>
 
-  <section class="relative min-h-[90vh] flex items-center justify-between px-16">
+    <div id="sobre"></div>
 
-    <div class="absolute inset-0 -z-10">
-      <div class="w-full h-full bg-gradient-to-br from-blue-600/20 via-transparent to-cyan-400/20 animate-pulse"></div>
-    </div>
-
-    <div class="relative w-1/2 hidden md:flex justify-center">
-
-      <div
-        class="w-48 h-48 border-2 border-[var(--color-text)]/20 rounded-2xl flex items-center justify-center absolute left-10 top-10 backdrop-blur-md">
-        Foto 1
+    <section id="projetos" class="relative min-h-[90vh] px-6 md:px-16 py-16 md:py-24 scroll-mt-20">
+      <div class="flex items-end justify-between mb-10 flex-wrap gap-4">
+        <div>
+          <p class="text-sm mb-1 text-[var(--color-text)]/60">03</p>
+          <h2 class="text-3xl text-[var(--color-primary)]">Meus projetos</h2>
+        </div>
       </div>
 
-      <div
-        class="w-48 h-48 border-2 border-[var(--color-text)]/20 rounded-2xl flex items-center justify-center absolute left-40 top-40 backdrop-blur-md">
-        Foto 2
-      </div>
-
-    </div>
-
-    <div class="w-full md:w-1/2">
-
-      <p class="mb-2 text-sm text-[var(--color-text)]/70">
-        Bem-vindo ao
-      </p>
-
-      <p class="mb-4 text-lg">
-        Meu Portfólio
-      </p>
-
-      <h1 class="text-5xl mb-4 text-[var(--color-primary)]" style="font-family: 'Poppins'">
-        Arthur/Thuko
-      </h1>
-
-      <p class="text-lg mb-6 text-[var(--color-text)]/80">
-        Desenvolvedor Full-Stack | Web/Mobile/Desktop
-      </p>
-
-      <div class="flex gap-4">
-
-        <button class="px-6 py-3 rounded-lg bg-[var(--color-primary)] hover:bg-[var(--color-accent)] transition">
-          Projetos
+      <div class="projetos-wrapper relative">
+        <button
+          id="prevBtn"
+          aria-label="Projeto anterior"
+          class="nav-btn hidden md:flex items-center justify-center rounded-full absolute -left-6 top-1/2 w-11 h-11 z-10 border border-[var(--color-text)]/20 bg-[var(--color-background)]"
+        >
+          ‹
         </button>
+
+        <div
+          id="projetos-track"
+          class="flex gap-6 overflow-x-auto pb-4 py-3"
+          style="scroll-snap-type: x mandatory"
+          tabindex="0"
+          role="region"
+          aria-label="Carrossel de projetos"
+        >
+          <article
+            class="project-card flex-shrink-0 w-[300px] border-2 border-[var(--color-text)]/20 rounded-2xl p-5 backdrop-blur-md"
+            style="scroll-snap-align: start"
+          >
+            <div
+              class="thumb-wrap w-full h-40 rounded-lg mb-4 flex items-center justify-center text-sm bg-[var(--color-text)]/5"
+            >
+              <img
+                src="../public/projects/AquinozBot.jpg"
+                alt="Logo AquinozBot"
+                class="w-full h-full object-cover rounded-lg"
+                loading="lazy"
+              />
+            </div>
+            <h3 class="text-lg font-semibold mb-1">Aquinoz Bot</h3>
+            <p class="text-sm mb-3 text-[var(--color-text)]/75">
+              ChatBot integrado com IA no Telegram. Usado para guardar conteúdos
+              de matérias (texto ou foto), criar resumos, gerar questionários,
+              seja em texto ou áudio.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span
+                class="tag-chip text-xs px-2 py-1 rounded-full border border-[var(--color-text)]/20"
+                >Python (Flask)</span
+              >
+              <span
+                class="tag-chip text-xs px-2 py-1 rounded-full border border-[var(--color-text)]/20"
+                >SQLite</span
+              >
+            </div>
+            <a
+              href="https://github.com/ArthurThuko/Aquinoz_Bot"
+              target="_blank"
+              class="go-link text-sm font-medium text-[var(--color-primary)]"
+            >
+              GitHub
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M5 12h14M13 6l6 6-6 6" />
+              </svg>
+            </a>
+          </article>
+
+          <article
+            class="project-card flex-shrink-0 w-[300px] border-2 border-[var(--color-text)]/20 rounded-2xl p-5 backdrop-blur-md"
+            style="scroll-snap-align: start"
+          >
+            <div
+              class="thumb-wrap w-full h-40 rounded-lg mb-4 flex items-center justify-center text-sm bg-[var(--color-text)]/5"
+            >
+              <img
+                src="../public/projects/Lux.jpg"
+                alt="Logo Lux"
+                class="w-full h-full object-cover rounded-lg"
+                loading="lazy"
+              />
+            </div>
+            <h3 class="text-lg font-semibold mb-1">Lux</h3>
+            <p class="text-sm mb-3 text-[var(--color-text)]/75">
+              Jogo de plataforma 2D/Puzzle para o projeto de extensão do 2º
+              período do curso de Sistemas de Informação. Uma cientista que usa
+              o conceito de fenômenos ondulatórios para derrotar inimigos das
+              sombras.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span
+                class="tag-chip text-xs px-2 py-1 rounded-full border border-[var(--color-text)]/20"
+                >C#</span
+              >
+              <span
+                class="tag-chip text-xs px-2 py-1 rounded-full border border-[var(--color-text)]/20"
+                >Unity</span
+              >
+            </div>
+            <a
+              href="https://github.com/ArthurThuko/ProjetoLux"
+              target="_blank"
+              class="go-link text-sm font-medium text-[var(--color-primary)]"
+            >
+              GitHub
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M5 12h14M13 6l6 6-6 6" />
+              </svg>
+            </a>
+          </article>
+
+          <article
+            class="project-card flex-shrink-0 w-[300px] border-2 border-[var(--color-text)]/20 rounded-2xl p-5 backdrop-blur-md"
+            style="scroll-snap-align: start"
+          >
+            <div
+              class="thumb-wrap w-full h-40 rounded-lg mb-4 flex items-center justify-center text-sm bg-[var(--color-text)]/5"
+            >
+              <img
+                src="../public/projects/GameWooord.png"
+                alt="Tela GameWooord"
+                class="w-full h-full object-cover rounded-lg"
+                loading="lazy"
+              />
+            </div>
+            <h3 class="text-lg font-semibold mb-1">GameWooord</h3>
+            <p class="text-sm mb-3 text-[var(--color-text)]/75">
+              Um jogo simples, divertido e rápido onde o seu desafio é digitar o
+              máximo de palavras válidas antes que o tempo acabe!
+            </p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span
+                class="tag-chip text-xs px-2 py-1 rounded-full border border-[var(--color-text)]/20"
+                >HTML/CSS/JS</span
+              >
+              <span
+                class="tag-chip text-xs px-2 py-1 rounded-full border border-[var(--color-text)]/20"
+                >Vercel</span
+              >
+            </div>
+            <a
+              href="https://gamewoord.vercel.app"
+              target="_blank"
+              class="go-link text-sm font-medium text-[var(--color-primary)]"
+            >
+              Site
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M5 12h14M13 6l6 6-6 6" />
+              </svg>
+            </a>
+          </article>
+
+          <article
+            class="project-card flex-shrink-0 w-[300px] border-2 border-[var(--color-text)]/20 rounded-2xl p-5 backdrop-blur-md"
+            style="scroll-snap-align: start"
+          >
+            <div
+              class="thumb-wrap w-full h-40 rounded-lg mb-4 flex items-center justify-center text-sm bg-[var(--color-text)]/5"
+            >
+              <img
+                src="../public/projects/AcademiaBF.jpeg"
+                alt="Logo Academia BF"
+                class="w-full h-full object-cover rounded-lg"
+                loading="lazy"
+              />
+            </div>
+            <h3 class="text-lg font-semibold mb-1">Academia Blitz Forma</h3>
+            <p class="text-sm mb-3 text-[var(--color-text)]/75">
+              Site oficial da academia Blitz Forma, com informações sobre
+              planos, horários, equipe e contato. Além do formulário de
+              inscrição para novos alunos e avaliações.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span
+                class="tag-chip text-xs px-2 py-1 rounded-full border border-[var(--color-text)]/20"
+                >HTML/CSS/JS</span
+              >
+              <span
+                class="tag-chip text-xs px-2 py-1 rounded-full border border-[var(--color-text)]/20"
+                >PHP</span
+              >
+              <span
+                class="tag-chip text-xs px-2 py-1 rounded-full border border-[var(--color-text)]/20"
+                >MySQL</span
+              >
+            </div>
+            <a
+              href="https://blitzforma.com.br"
+              target="_blank"
+              class="go-link text-sm font-medium text-[var(--color-primary)]"
+            >
+              Site
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M5 12h14M13 6l6 6-6 6" />
+              </svg>
+            </a>
+          </article>
+
+          <article
+            class="project-card flex-shrink-0 w-[300px] border-2 border-[var(--color-text)]/20 rounded-2xl p-5 backdrop-blur-md"
+            style="scroll-snap-align: start"
+          >
+            <div
+              class="thumb-wrap w-full h-40 rounded-lg mb-4 flex items-center justify-center text-sm bg-[var(--color-text)]/5"
+            >
+              <img
+                src="../public/projects/AlphaLanches.jpg"
+                alt="Tela AlphaLanches"
+                class="w-full h-full object-cover rounded-lg"
+                loading="lazy"
+              />
+            </div>
+            <h3 class="text-lg font-semibold mb-1">AlphaLanches</h3>
+            <p class="text-sm mb-3 text-[var(--color-text)]/75">
+              Sistema web para a lanchonete da escola Sete de Setembro em Paulo
+              Afonso - BA. Contendo a tela de Cadastro de Usuários, Estoque,
+              PDV, Históricos, Financeiro, entre outros.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span
+                class="tag-chip text-xs px-2 py-1 rounded-full border border-[var(--color-text)]/20"
+                >PHP(Laravel)</span
+              >
+              <span
+                class="tag-chip text-xs px-2 py-1 rounded-full border border-[var(--color-text)]/20"
+                >MySQL</span
+              >
+              <span
+                class="tag-chip text-xs px-2 py-1 rounded-full border border-[var(--color-text)]/20"
+                >Bootstrap</span
+              >
+            </div>
+            <a
+              href="https://github.com/Elliton-Luis/alpha-lanches"
+              target="_blank"
+              class="go-link text-sm font-medium text-[var(--color-primary)]"
+            >
+              GitHub
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M5 12h14M13 6l6 6-6 6" />
+              </svg>
+            </a>
+          </article>
+
+          <article
+            class="project-card flex-shrink-0 w-[300px] border-2 border-[var(--color-text)]/20 rounded-2xl p-5 backdrop-blur-md"
+            style="scroll-snap-align: start"
+          >
+            <div
+              class="thumb-wrap w-full h-40 rounded-lg mb-4 flex items-center justify-center text-sm bg-[var(--color-text)]/5"
+            >
+              <img
+                src="../public/projects/Cooruja.png"
+                alt="Logo Cooruja"
+                class="w-full h-full object-cover rounded-lg"
+                loading="lazy"
+              />
+            </div>
+            <h3 class="text-lg font-semibold mb-1">Cooruja</h3>
+            <p class="text-sm mb-3 text-[var(--color-text)]/75">
+              A plataforma Cooruja possibilita que os cidadãos façam denúncias e
+              auxiliem as autoridades no monitoramento de irregularidades em
+              estabelecimentos e espaços públicos.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span
+                class="tag-chip text-xs px-2 py-1 rounded-full border border-[var(--color-text)]/20"
+                >Java (Spring Boot)</span
+              >
+              <span
+                class="tag-chip text-xs px-2 py-1 rounded-full border border-[var(--color-text)]/20"
+                >Maven</span
+              >
+            </div>
+            <a
+              href="https://github.com/ProjetoHardTech/CorujaFrontend"
+              target="_blank"
+              class="go-link text-sm font-medium text-[var(--color-primary)]"
+            >
+              GitHub
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M5 12h14M13 6l6 6-6 6" />
+              </svg>
+            </a>
+          </article>
+
+          <article
+            class="project-card flex-shrink-0 w-[300px] border-2 border-[var(--color-text)]/20 rounded-2xl p-5 backdrop-blur-md"
+            style="scroll-snap-align: start"
+          >
+            <div
+              class="thumb-wrap w-full h-40 rounded-lg mb-4 flex items-center justify-center text-sm bg-[var(--color-text)]/5"
+            >
+              <img
+                src="../public/projects/AlphaControl.png"
+                alt="Logo AlphaControl"
+                class="w-full h-full object-cover rounded-lg"
+                loading="lazy"
+              />
+            </div>
+            <h3 class="text-lg font-semibold mb-1">AlphaControl</h3>
+            <p class="text-sm mb-3 text-[var(--color-text)]/75">
+              Sistema desktop usado para informatizar e organizar os processos
+              de vendas, controle de estoque e movimentação financeira de um
+              comércio.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span
+                class="tag-chip text-xs px-2 py-1 rounded-full border border-[var(--color-text)]/20"
+                >Java (Swing)</span
+              >
+            </div>
+            <a
+              href="https://github.com/ArthurThuko/AlphaControl"
+              target="_blank"
+              class="go-link text-sm font-medium text-[var(--color-primary)]"
+            >
+              GitHub
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M5 12h14M13 6l6 6-6 6" />
+              </svg>
+            </a>
+          </article>
+
+          <article
+            class="project-card flex-shrink-0 w-[300px] border-2 border-[var(--color-text)]/20 rounded-2xl p-5 backdrop-blur-md"
+            style="scroll-snap-align: start"
+          >
+            <div
+              class="thumb-wrap w-full h-40 rounded-lg mb-4 flex items-center justify-center text-sm bg-[var(--color-text)]/5"
+            >
+              <img
+                src="../public/projects/JuriSimulado.jpg"
+                alt="Logo JuriSimulado"
+                class="w-full h-full object-cover rounded-lg"
+                loading="lazy"
+              />
+            </div>
+            <h3 class="text-lg font-semibold mb-1">Juri Simulado - Votação</h3>
+            <p class="text-sm mb-3 text-[var(--color-text)]/75">
+              Sistema de votação online para simulações de júri popular em
+              ambientes acadêmicos ou eventos jurídicos, com votos anônimos e
+              resultados em tempo real.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span
+                class="tag-chip text-xs px-2 py-1 rounded-full border border-[var(--color-text)]/20"
+                >Node.JS</span
+              >
+              <span
+                class="tag-chip text-xs px-2 py-1 rounded-full border border-[var(--color-text)]/20"
+                >Bootstrap</span
+              >
+              <span
+                class="tag-chip text-xs px-2 py-1 rounded-full border border-[var(--color-text)]/20"
+                >HTML/CSS/JS</span
+              >
+            </div>
+            <a
+              href="https://github.com/ArthurThuko/Votacao_Direito"
+              target="_blank"
+              class="go-link text-sm font-medium text-[var(--color-primary)]"
+            >
+              Site
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M5 12h14M13 6l6 6-6 6" />
+              </svg>
+            </a>
+          </article>
+        </div>
 
         <button
-          class="px-6 py-3 rounded-lg border border-[var(--color-text)]/20 hover:bg-[var(--color-text)]/10 transition">
-          Contato
+          id="nextBtn"
+          aria-label="Próximo projeto"
+          class="nav-btn hidden md:flex items-center justify-center rounded-full absolute -right-6 top-1/2 w-11 h-11 z-10 border border-[var(--color-text)]/20 bg-[var(--color-background)]"
+        >
+          ›
         </button>
-
       </div>
 
-    </div>
+      <div id="dots" class="flex md:hidden justify-center gap-2 mt-4"></div>
 
-  </section>
+      <a
+        href="https://github.com/ArthurThuko"
+        target="_blank"
+        class="text-sm underline underline-offset-4 text-[var(--color-primary)] go-link ml-5"
+        >Ver todos os projetos
+      </a>
+    </section>
 
-  <div class="flex justify-center pb-6">
-    <div class="w-6 h-6 border-b-2 border-r-2 rotate-45 border-[var(--color-text)]/50 animate-bounce"></div>
-  </div>
+    <div id="tecnologias"></div>
 
-  <script src="./scripts/theme.js"></script>
-  <script src="./scripts/components.js"></script>
-</body>
+    <div id="contato"></div>
 
+    <div id="footer"></div>
+
+    <script src="./scripts/theme.js"></script>
+    <script src="./scripts/components.js"></script>
+    <script src="./scripts/mapWrap.js"></script>
+    <script src="./scripts/listCard.js"></script>
+  </body>
 </html>

@@ -1,6 +1,6 @@
 <section
   id="inicio"
-  class="relative min-h-[90vh] flex flex-col-reverse md:flex-row items-center justify-center md:justify-between gap-10 px-6 sm:px-8 md:px-16 pt-28 md:pt-24 pb-16 scroll-mt-20"
+  class="relative min-h-[90vh] flex flex-col-reverse md:flex-row items-center justify-center md:justify-between gap-10 px-6 sm:px-8 md:px-16 xl:px-24 pt-28 md:pt-24 pb-16 scroll-mt-20"
 >
   <div class="absolute inset-0 -z-10">
     <div
@@ -8,59 +8,73 @@
     ></div>
   </div>
 
+  <!-- wrapper para limitar e centralizar o conteúdo em telas grandes -->
   <div
-    class="flex relative w-full max-w-[320px] sm:max-w-[380px] md:w-1/2 md:max-w-none h-[280px] sm:h-[320px] md:h-[400px] items-center justify-center"
+    class="w-full max-w-7xl mx-auto flex flex-col-reverse md:flex-row items-center justify-center md:justify-between gap-10"
   >
     <div
-      class="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 border-2 border-[var(--color-text)]/20 rounded-2xl flex items-center justify-center absolute top-1/2 left-1/2 -translate-x-[70%] -translate-y-[70%] backdrop-blur-md"
+      class="flex relative w-full max-w-[320px] sm:max-w-[380px] md:w-1/2 md:max-w-none h-[280px] sm:h-[320px] md:h-[400px] lg:h-[460px] xl:h-[520px] items-center justify-center"
     >
-      <img
-        src="../public/images/Foto.jpeg"
-        alt="Foto"
-        class="w-full h-full rounded-2xl object-cover"
-      />
+      <div
+        class="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 xl:w-64 xl:h-64 border-2 border-[var(--color-text)]/20 rounded-2xl flex items-center justify-center absolute top-1/2 left-1/2 -translate-x-[70%] -translate-y-[70%] backdrop-blur-md"
+      >
+        <img
+          src="../public/images/Foto.jpeg"
+          alt="Foto"
+          class="w-full h-full rounded-2xl object-cover"
+        />
+      </div>
+
+      <div
+        class="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 xl:w-64 xl:h-64 border-2 border-[var(--color-text)]/20 rounded-2xl flex items-center justify-center absolute top-1/2 left-1/2 translate-x-[10%] translate-y-[10%] backdrop-blur-md"
+      >
+        <img
+          src="../public/images/Avatar.png"
+          alt="Avatar"
+          class="w-full h-full rounded-2xl object-cover"
+        />
+      </div>
     </div>
 
-    <div
-      class="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 border-2 border-[var(--color-text)]/20 rounded-2xl flex items-center justify-center absolute top-1/2 left-1/2 translate-x-[10%] translate-y-[10%] backdrop-blur-md"
-    >
-      <img
-        src="../public/images/Avatar.png"
-        alt="Avatar"
-        class="w-full h-full rounded-2xl object-cover"
-      />
+    <div class="w-full md:w-1/2 text-center md:text-left">
+      <p class="mb-2 text-sm lg:text-base text-[var(--color-text)]/70">
+        Bem-vindo ao
+      </p>
+
+      <p class="mb-4 text-base md:text-lg lg:text-xl">Meu Portfólio</p>
+
+      <h1
+        class="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl mb-4 text-[var(--color-primary)] break-words"
+      >
+        Arthur/Thuko
+      </h1>
+
+      <p
+        class="text-base md:text-lg lg:text-xl mb-6 text-[var(--color-text)]/80"
+      >
+        Desenvolvedor Full-Stack | Web/Mobile/Desktop
+      </p>
+
+      <div class="flex flex-wrap justify-center md:justify-start gap-4">
+        <a href="#projetos">
+          <button
+            class="cta-btn px-6 py-3 lg:px-8 lg:py-4 lg:text-lg rounded-lg bg-[var(--color-primary)] hover:bg-[var(--color-accent)] transition"
+          >
+            Projetos
+          </button>
+        </a>
+
+        <a href="#contato">
+          <button
+            class="cta-btn px-6 py-3 lg:px-8 lg:py-4 lg:text-lg rounded-lg border border-[var(--color-text)]/20 hover:bg-[var(--color-text)]/10 transition"
+          >
+            Contato
+          </button>
+        </a>
+      </div>
     </div>
   </div>
 
-  <div class="w-full md:w-1/2 text-center md:text-left">
-    <p class="mb-2 text-sm text-[var(--color-text)]/70">Bem-vindo ao</p>
-
-    <p class="mb-4 text-base md:text-lg">Meu Portfólio</p>
-
-    <h1 class="text-4xl sm:text-5xl mb-4 text-[var(--color-primary)] break-words">Arthur/Thuko</h1>
-
-    <p class="text-base md:text-lg mb-6 text-[var(--color-text)]/80">
-      Desenvolvedor Full-Stack | Web/Mobile/Desktop
-    </p>
-
-    <div class="flex flex-wrap justify-center md:justify-start gap-4">
-      <a href="#projetos">
-        <button
-          class="cta-btn px-6 py-3 rounded-lg bg-[var(--color-primary)] hover:bg-[var(--color-accent)] transition"
-        >
-          Projetos
-        </button>
-      </a>
-
-      <a href="#contato">
-        <button
-          class="cta-btn px-6 py-3 rounded-lg border border-[var(--color-text)]/20 hover:bg-[var(--color-text)]/10 transition"
-        >
-          Contato
-        </button>
-      </a>
-    </div>
-  </div>
   <div class="hidden sm:flex absolute bottom-6 left-0 w-full justify-center">
     <div
       class="w-6 h-6 border-b-2 border-r-2 rotate-45 border-[var(--color-text)]/50 animate-bounce"
